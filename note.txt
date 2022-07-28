@@ -1,0 +1,29 @@
+2022-07-27
+----------
+#1
+I'm passing deleteTask App -> Tasks -> Task component.
+onClick={() => onDelete(task.id)} // id === task.id
+onClick={onDelete} // id === event (Syntatic base event)
+So, without wrapping in a function, deleteTask id argument refers to the event.
+
+#2
+{showAddTask && <AddTask onAdd={addTask} />}
+A short way to do ternary operation.
+
+#3
+async functions mustn't be passed to useEffect.
+https://devtrium.com/posts/async-functions-useeffect
+
+#4
+Got from the video comment.
+https://www.youtube.com/watch?v=w7ejDZ8SWv8
+The code that generates ids in the function handler 'addTask' in 'App.js' component, given below:
+const id = Math.floor(Math.random()*10000) + 1;
+could be changed to:
+const id = Math.floor(Math.random()*10000) + 4;
+since we already have ids of 1, 2 & 3.
+
+2022-07-29
+----------
+Updated to React Router v6 Major Changes.
+https://www.youtube.com/watch?v=k2Zk5cbiZhg
